@@ -2,6 +2,8 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "bin-angular": "apps/bin-angular",
+    "bin-angular-e2e": "apps/bin-angular-e2e",
     "binance-api-node": "apps/binance-api-node"
   }
 }
