@@ -5,14 +5,14 @@ import {
     ChartingLibraryWidgetOptions,
     LanguageCode,
     ResolutionString,
-} from '../../assets/charting_library/charting_library';
+} from '../../assets/charting_library';
 
 @Component({
-    selector: 'app-tv-chart',
-    templateUrl: './tv-chart.component.html',
-    styleUrls: ['./tv-chart.component.scss']
+    selector: 'app-tv-chart-container',
+    templateUrl: './tv-chart-container.component.html',
+    styleUrls: ['./tv-chart-container.component.scss']
 })
-export class TvChartComponent implements OnInit, OnDestroy {
+export class TvChartContainerComponent implements OnInit, OnDestroy {
     private _symbol: ChartingLibraryWidgetOptions['symbol'] = 'AAPL';
     private _interval: ChartingLibraryWidgetOptions['interval'] = 'D' as ResolutionString;
     // BEWARE: no trailing slash is expected in feed URL
