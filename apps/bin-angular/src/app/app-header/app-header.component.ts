@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { version } from '../../assets/charting_library';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'app-header',
   templateUrl: './app-header.component.html',
   styleUrls: ['./app-header.component.scss']

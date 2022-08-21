@@ -7,11 +7,10 @@ import {
   LanguageCode,
   ResolutionString,
 } from '../../assets/charting_library';
-
-// eslint-disable-next-line no-var
-declare var Datafeeds: any;
+import { Datafeed } from '../core/datafeed';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'app-tv-chart-container',
   templateUrl: './tv-chart-container.component.html',
   styleUrls: ['./tv-chart-container.component.scss'],
@@ -115,7 +114,7 @@ export class TvChartContainerComponent implements OnInit, OnDestroy {
 
     const widgetOptions: ChartingLibraryWidgetOptions = {
       symbol: this._symbol,
-      datafeed: (window as any).Datafeeds,
+      datafeed: new Datafeed(this.socket).DatafeedBuilder(),
       interval: this._interval,
       container: this._containerId,
       library_path: this._libraryPath,

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Injectable } from '@angular/core';
 import { Socket } from 'ngx-socket-io';
 import { map } from 'rxjs/operators';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
