@@ -7,5 +7,5 @@ import { version } from '../../assets/charting_library';
   styleUrls: ['./app-header.component.scss']
 })
 export class AppHeaderComponent {
-  title = 'TradingView Charting Library and Angular 5 Integration Example ' + version();
+  title = 'TradingView Charting Library and Angular Integration';
 }
