@@ -2,17 +2,21 @@
 
 # BlockchainMicroRepo created by vinh.nguyentuan
 
-Required system to start
+Required system to start:
 
 node-v16
-npm install
-npm run runall
+
+`npm install`
+`npm run runall`
+
 
 to start backend and frontend at the same time
-npm run runall
+
+`npm run runall`
 
 to start frontend only
-npm run fe
+
+`npm run fe`
 
 This project was generated using [Nx](https://nx.dev).
 
