@@ -80,7 +80,16 @@ export class ResolutionSelectorComponent implements OnInit {
 
   getItems() {
     const relus = localStorage.getItem('RELUTION_TIMES') as any;
-    this.resolutionTimesPicked = JSON.parse(relus)
+    if (!relus) {
+      this.resolutionTimesPicked = this.relutionList;
+    } else {
+      const relutiontimes = JSON.parse(relus);
+      if (relutiontimes.length === 0) {
+        this.resolutionTimesPicked = this.relutionList;
+      } else {
+        this.resolutionTimesPicked = JSON.parse(relus);
+      }
+    }
   }
 
   ngOnInit(): void {
