@@ -2,6 +2,10 @@
 
 # BlockchainMicroRepo created by vinh.nguyentuan
 
+required 
+-node-v16
+-npm run runall to start backend and frontend at the same time
+
 
 This project was generated using [Nx](https://nx.dev).
 
