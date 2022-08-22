@@ -1,0 +1,16 @@
+<div class="popup-viewer-container">
+  <div #myBox class="icon-viewer inline-block" (click)="onOpenPopup()">
+    <ng-content></ng-content>
+  </div>
+
+  <div
+    #popupRef
+    class="popup"
+    [ngStyle]="position"
+    [hidden]="!popupView"
+  >
+    <div class="inner text-base">
+      <ng-content select="[content]"></ng-content>
+    </div>
+  </div>
+</div>

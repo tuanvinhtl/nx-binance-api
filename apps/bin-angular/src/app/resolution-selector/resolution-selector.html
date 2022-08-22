@@ -2,16 +2,41 @@
   <div class="grp-left">
     <div class="p-element">
       <div class="p-selectbutton">
-        <div class="p-button">Time</div>
-        <div class="p-button">1m</div>
-        <div class="p-button">3m</div>
-        <div class="p-button">5m</div>
-        <div class="p-button">30m</div>
-        <div class="p-button">1H</div>
-        <div class="p-button">2H</div>
-        <div class="p-button">4H</div>
-        <div class="p-button">1D</div>
-        <div class="p-button">1W</div>
+        <div
+          class="p-button"
+          *ngFor="let relus of resolutionTimesPicked"
+          [ngClass]="{'actived': selected === relus.value}"
+          (click)="clickedRelutionTime(relus)"
+        >
+          {{relus.label}}
+        </div>
+      </div>
+      <div class="p-action">
+        <app-popover>
+          <div class="p-button" (click)="opendPopup = !opendPopup">
+            <i
+              class="fa-solid fa-caret-down"
+              [ngClass]="{'opened': opendPopup}"
+            >
+            </i>
+          </div>
+          <div content>
+            <div class="timeslot-grwaper">
+              <div
+                class="block-timeslot"
+                [ngClass]="{'checked': maskedCheck(relus)}"
+                (click)="onResTimesPicked(relus)"
+                *ngFor="let relus of relutionList"
+              >
+                {{relus.label}}
+                <i
+                  class="fa-solid fa-circle-check check-circal"
+                  *ngIf="maskedCheck(relus)"
+                ></i>
+              </div>
+            </div>
+          </div>
+        </app-popover>
       </div>
     </div>
   </div>

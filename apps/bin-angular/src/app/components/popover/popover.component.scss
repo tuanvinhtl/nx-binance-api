@@ -1,0 +1,28 @@
+.popup {
+  position: absolute;
+  transform: translate3d(0, -50%, 0);
+  box-shadow: 0 0 10px 0 rgba(37, 40, 43, 0.12);
+  background: none;
+  border-radius: 3px;
+  z-index: 3000;
+  background: white;
+}
+
+.popup:after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  background: #fff;
+  position: absolute;
+  box-shadow: 0 0 10px 0 rgba(37, 40, 43, 0.12);
+  z-index: -1;
+  top: -10px;
+  left: calc(50% - 10px);
+}
+
+.inner {
+  padding: 15px;
+  background: #fff;
+  border-radius: 3px;
+}

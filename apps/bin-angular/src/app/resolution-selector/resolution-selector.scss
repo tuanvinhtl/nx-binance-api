@@ -1,5 +1,93 @@
+@import '../../assets/scss/media.scss';
+@import '../../assets/scss/partials/_variables.scss';
+
 :host {
   .chart-toolbar {
-    font-size: 12px;
+    // font-size: 12px;
+  }
+  .chart-toolbar {
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid #e7e7e7;
+
+    .grp-left {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+
+      .p-selectbutton {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    .grp-right {
+      flex: 1;
+      .p-selectbutton {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+
+      .p-element {
+        display: block;
+      }
+    }
+
+    .p-element {
+      display: flex;
+
+      .p-action {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+  .p-button {
+    padding: 8px 12px;
+    border-right: 1px solid #e7e7e7;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .actived {
+    background: $primary-color;
+    color: $white;
+  }
+  .opened {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  .timeslot-grwaper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .block-timeslot {
+      padding: 8px;
+      display: inline-block;
+      width: 60px;
+      text-align: center;
+      border: 1px solid #e7e7e7;
+      margin: 1px;
+      position: relative;
+
+      .check-circal {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        font-size: 13px;
+        color: $primary-color;
+      }
+    }
+    .checked {
+      border: 1px solid $primary-color;
+    }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
