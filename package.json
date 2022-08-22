@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
+    "fe":"nx serve bin-angular",
     "runall": "nx run-many --target=serve --projects=bin-angular,binance-api-node --parallel=2",
     "build": "nx build",
     "test": "nx test",
