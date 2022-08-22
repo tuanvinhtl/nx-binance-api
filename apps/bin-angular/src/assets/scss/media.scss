@@ -1,0 +1,96 @@
+/* Mixin */
+/* Set các giá trị với màn hình tương ứng */
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin scr-mobile() {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin scr-tablet() {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin scr-none-desktop() {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin scr-desktop() {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone {
+    //600px
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tab-port {
+    //900px
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tab-land {
+    //1200px
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  /* ----------- iPad Pro ----------- */
+  @if $breakpoint==ipad-pro {
+    /* Portrait and Landscape */
+    @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==ipad-pro-l {
+    /* Landscape */
+    @media only screen and (min-device-width: 1366px) and (max-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+      @content;
+    }
+  }
+  /* ----------- iPad ----------- */
+  @if $breakpoint==ipad {
+    /* Portrait and Landscape */
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+      @content; /* your css rules for ipad portrait */
+    }
+  }
+
+  @if $breakpoint==ipad-l {
+    /* Landscape */
+    @media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+      @content; /* your css rules for ipad landscape */
+    }
+  }
+  /*---End Ipad-----*/
+
+  @if $breakpoint==laptop {
+    //1366
+    @media only screen and (min-width: 1366px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==big-desktop {
+    //1800px
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}

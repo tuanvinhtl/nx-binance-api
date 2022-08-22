@@ -1,0 +1,188 @@
+@import "../media.scss";
+.page-toolbar {
+  height: 40px;
+  background: white;
+  box-shadow: 0 0.125rem 0.5rem 0.125rem rgba(218, 224, 232, 0.75);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .toolbar-action-item {
+    button {
+      color: #333333 !important;
+      font-weight: 300;
+    }
+    .mat-icon {
+      font-size: 16px;
+      padding: 3px;
+    }
+  }
+}
+
+.containers {
+  display: flex;
+  flex-direction: row;
+
+  &--left {
+    flex: 1;
+    height: 800px;
+    background: white;
+    margin: 10px;
+    box-shadow: 0 0.125rem 0.5rem 0.125rem rgba(218, 224, 232, 0.75);
+    padding: 5px;
+    overflow-y: auto;
+    @include respond(phone) {
+      display: none;
+    }
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &--right {
+    flex: 3;
+    height: 800px;
+    margin: 10px 10px 10px 0;
+    background: white;
+    box-shadow: 0 0.125rem 0.5rem 0.125rem rgba(218, 224, 232, 0.75);
+    padding: 5px;
+    display: flex;
+    overflow-y: auto;
+    @include respond(phone) {
+      margin: 10px;
+    }
+    @include respond(tab-port) {
+      margin: 10px;
+    }
+
+    &--action-block {
+      padding-top: 5px;
+      border-top: 1px solid rgba(0, 0, 0, 0.125);
+      height: 60px;
+      align-self: flex-end;
+      width: 100%;
+    }
+  }
+  &--center {
+    height: 800px;
+    margin: 10px 10px 10px 0;
+    background: white;
+    box-shadow: 0 0.125rem 0.5rem 0.125rem rgba(218, 224, 232, 0.75);
+    padding: 5px;
+    overflow-y: auto;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+.highlight {
+  background: rgb(234 240 242); /* green */
+}
+.ag-theme-alpine .ag-row-selected {
+  background-color: #ebf5ff !important;
+}
+.clear-path {
+  margin: 0 10px;
+  border-left: 1px solid rgba($color: #333333, $alpha: 0.7);
+  width: 0;
+  vertical-align: middle;
+  display: inline-block;
+  height: 20px;
+}
+
+.card-header {
+  background: none !important;
+}
+
+.btn-action {
+  height: 100%;
+  width: 150px;
+  margin-right: 5px !important;
+}
+
+.primary {
+  background: #3fafd7;
+  color: white;
+}
+
+td {
+  .status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .unavailable {
+    background: #cad2de;
+  }
+  .available {
+    background: #3ac159;
+  }
+}
+
+.card-header {
+  background: none;
+  margin-bottom: 10px;
+}
+.btn-search {
+  padding: 10px;
+}
+
+.card-header {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+.search-title {
+  margin-top: 5px;
+  float: left;
+}
+
+.search-settings {
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 1px 3px rgba(218, 224, 232, 0.9);
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  justify-items: center;
+  float: right;
+  align-items: center;
+  transition: 0.3s ease background;
+
+  > * {
+    flex: 1;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:hover {
+    background: #3fafd7;
+    cursor: pointer;
+    & i {
+      color: white !important;
+    }
+  }
+}
+
+.card-body {
+  position: relative;
+  padding: 10px !important;
+  font-size: 13px;
+}
+.sidenav-setting-form {
+  height: 100%;
+  position: absolute;
+  width: 0;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.2s;
+  background: white;
+}
+.open-nav {
+  display: block;
+  transition: 0.2s;
+  width: 100%;
+  padding: 10px;
+}

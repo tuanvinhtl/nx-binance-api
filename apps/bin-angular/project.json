@@ -17,7 +17,10 @@
           "apps/bin-angular/src/favicon.ico",
           "apps/bin-angular/src/assets"
         ],
-        "styles": ["apps/bin-angular/src/styles.scss"],
+        "styles": [
+          "apps/bin-angular/src/styles.scss",
+          "apps/bin-angular/src/assets/icons/fontawesome/css/all.css"
+        ],
         "scripts": []
       },
       "configurations": {
